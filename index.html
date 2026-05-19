@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Digital | Roda Mas Motor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hondaRed: '#CC0000',
+                        hondaDark: '#990000',
+                        hondaLight: '#FF3333'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scroll-smooth { scroll-behavior: smooth; }
+        .hero-bg { 
+            background: linear-gradient(rgba(204, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1558981403-c5f91cbba527?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-hondaRed p-2 rounded-lg text-white">
+                    <i class="fas fa-motorcycle fa-lg"></i>
+                </div>
+                <span class="font-black text-xl tracking-tighter text-gray-900">RODA MAS MOTOR</span>
+            </div>
+            <!-- Mobile Menu Toggle (Simplified for HTML example) -->
+            <div class="hidden md:flex space-x-6 font-bold text-xs text-gray-600 uppercase">
+                <a href="#home" class="hover:text-hondaRed transition">Home</a>
+                <a href="#katalog" class="hover:text-hondaRed transition">Katalog (H1)</a>
+                <a href="#kalkulator" class="hover:text-hondaRed transition">Kalkulator</a>
+                <a href="#servis" class="hover:text-hondaRed transition">Servis (H2)</a>
+                <a href="#edukasi" class="hover:text-hondaRed transition">Tips RM</a>
+            </div>
+            <a href="https://wa.me/6281234567890" class="bg-hondaRed text-white px-4 py-2 rounded-full font-bold text-xs shadow hover:bg-hondaDark transition">
+                WA ADMIN
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-bg min-h-[70vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-3xl md:text-6xl font-black mb-4 uppercase italic">Partner Berkendara Honda Anda</h1>
+            <p class="text-base md:text-xl text-red-100 mb-8">Dealer Resmi Honda & AHASS Terpercaya. Miliki motor impian dengan proses tercepat dan servis tanpa antre.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#katalog" class="bg-white text-hondaRed px-8 py-3 rounded-lg font-black shadow-xl hover:bg-gray-100 transition">Cek Katalog H1</a>
+                <a href="#servis" class="bg-hondaRed border border-white text-white px-8 py-3 rounded-lg font-black shadow-xl hover:bg-hondaDark transition">Booking AHASS H2</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION H1: KATALOG MOTOR (MOBILE FRIENDLY GRID) -->
+    <section id="katalog" class="max-w-7xl mx-auto py-16 px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-2 uppercase">Katalog Motor Terpopuler</h2>
+            <div class="h-1 w-16 bg-hondaRed mx-auto"></div>
+            <p class="mt-4 text-sm text-gray-500">Daftar harga dan pilihan motor Honda terbaru di Roda Mas Motor.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Motor Item 1 -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden group border border-transparent hover:border-hondaRed transition-all">
+                <div class="aspect-video bg-gray-200 relative overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/CC0000/FFFFFF?text=Honda+Vario+160" alt="Vario 160" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 bg-hondaRed text-white text-[10px] font-black px-2 py-1 rounded">HOT PROMO</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-black text-lg mb-1">Honda Vario 160</h3>
+                    <p class="text-hondaRed font-bold text-base mb-4">Cicilan Mulai Rp 35rb/Hari</p>
+                    <ul class="space-y-1 text-xs text-gray-500 mb-6">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Smart Key System</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Full Digital Panel</li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Roda%20Mas,%20saya%20tertarik%20dengan%20Vario%20160" class="block text-center w-full py-2.5 bg-hondaRed text-white font-bold rounded-lg hover:bg-hondaDark transition uppercase text-xs">Konsultasi Kredit</a>
+                </div>
+            </div>
+            <!-- Motor Item 2 -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden group border border-transparent hover:border-hondaRed transition-all">
+                <div class="aspect-video bg-gray-200 relative overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/CC0000/FFFFFF?text=Honda+Scoopy" alt="Scoopy" class="w-full h-full object-cover">
+                </div>
+                <div class="p-5">
+                    <h3 class="font-black text-lg mb-1">Honda Scoopy</h3>
+                    <p class="text-hondaRed font-bold text-base mb-4">Cicilan Mulai Rp 28rb/Hari</p>
+                    <ul class="space-y-1 text-xs text-gray-500 mb-6">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Iconic Design</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>USB Charger</li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Roda%20Mas,%20saya%20tertarik%20dengan%20Scoopy" class="block text-center w-full py-2.5 bg-hondaRed text-white font-bold rounded-lg hover:bg-hondaDark transition uppercase text-xs">Konsultasi Kredit</a>
+                </div>
+            </div>
+            <!-- Motor Item 3 -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden group border border-transparent hover:border-hondaRed transition-all">
+                <div class="aspect-video bg-gray-200 relative overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400/CC0000/FFFFFF?text=Honda+Beat" alt="Beat" class="w-full h-full object-cover">
+                    <span class="absolute top-3 left-3 bg-gray-900 text-white text-[10px] font-black px-2 py-1 rounded">TERIRIT</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-black text-lg mb-1">Honda Beat</h3>
+                    <p class="text-hondaRed font-bold text-base mb-4">Cicilan Mulai Rp 22rb/Hari</p>
+                    <ul class="space-y-1 text-xs text-gray-500 mb-6">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Mesin eSP Irit</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Power Charger</li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Roda%20Mas,%20saya%20tertarik%20dengan%20Beat" class="block text-center w-full py-2.5 bg-hondaRed text-white font-bold rounded-lg hover:bg-hondaDark transition uppercase text-xs">Konsultasi Kredit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: KALKULATOR KREDIT (MOBILE FRIENDLY FORM) -->
+    <section id="kalkulator" class="bg-gray-100 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <!-- Left: Form -->
+                <div class="p-8 md:w-1/2">
+                    <h3 class="text-2xl font-black text-gray-800 mb-2 uppercase">Kalkulator Kredit</h3>
+                    <p class="text-sm text-gray-500 mb-6">Hitung simulasi cicilan motor Honda impianmu secara instan.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Harga Motor (Rp)</label>
+                            <input type="number" id="price" value="25000000" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:border-hondaRed" placeholder="25.000.000">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Uang Muka / DP (Rp)</label>
+                            <input type="number" id="dp" value="3000000" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:border-hondaRed" placeholder="3.000.000">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Tenor (Bulan)</label>
+                            <select id="tenor" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:border-hondaRed bg-white">
+                                <option value="11">11 Bulan</option>
+                                <option value="23">23 Bulan</option>
+                                <option value="35" selected>35 Bulan</option>
+                            </select>
+                        </div>
+                        <button onclick="calculateCredit()" class="w-full bg-hondaRed text-white py-3 rounded-lg font-black shadow hover:bg-hondaDark transition uppercase text-sm mt-4">
+                            Hitung Simulasi
+                        </button>
+                    </div>
+                </div>
+                <!-- Right: Result -->
+                <div class="bg-hondaRed p-8 md:w-1/2 text-white flex flex-col justify-center items-center text-center">
+                    <p class="text-sm font-bold uppercase opacity-80 mb-2">Estimasi Cicilan Anda</p>
+                    <h4 class="text-4xl md:text-5xl font-black mb-4" id="monthly-installment">Rp 0</h4>
+                    <p class="text-xs opacity-80 mb-6 italic">*Simulasi bersifat perkiraan. Hubungi admin untuk promo bunga spesial Roda Mas Motor.</p>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20sudah%20hitung%20simulasi%20kredit" class="bg-white text-hondaRed px-6 py-2 rounded-full font-bold text-xs uppercase shadow-lg">Tanya Promo ACC</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION H2: SERVIS AHASS (MOBILE FRIENDLY) -->
+    <section id="servis" class="bg-white py-16 px-4 border-t">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+            <div class="lg:w-1/2">
+                <h2 class="text-3xl font-black text-gray-900 mb-4 uppercase italic">Booking Servis Anti-Antre!</h2>
+                <div class="h-1 w-20 bg-hondaRed mb-6"></div>
+                <p class="text-gray-600 mb-8">Layanan servis resmi AHASS Roda Mas dengan suku cadang 100% asli. Booking sekarang via WhatsApp untuk mendapatkan kuota servis prioritas tanpa perlu menunggu lama.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center p-4 bg-gray-50 rounded-xl">
+                        <i class="fas fa-certificate text-hondaRed text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-bold text-sm">Sparepart Asli</h4>
+                            <p class="text-[10px] text-gray-400">Garansi Kualitas AHM</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-gray-50 rounded-xl">
+                        <i class="fas fa-user-shield text-hondaRed text-2xl mr-4"></i>
+                        <div>
+                            <h4 class="font-bold text-sm">Mekanik Handal</h4>
+                            <p class="text-[10px] text-gray-400">Teknisi Tersertifikasi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 w-full">
+                <div class="bg-white border-2 border-hondaRed rounded-3xl p-6 shadow-xl">
+                    <h3 class="font-black text-lg text-hondaRed mb-4 border-b pb-2 uppercase">Menu Servis AHASS</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-2 border-b border-gray-100">
+                            <span class="text-sm font-bold text-gray-700">Servis Lengkap Matic</span>
+                            <span class="text-sm font-black text-hondaRed">Rp 85.000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 border-b border-gray-100">
+                            <span class="text-sm font-bold text-gray-700">Servis Injeksi</span>
+                            <span class="text-sm font-black text-hondaRed">Rp 45.000</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 border-b border-gray-100">
+                            <span class="text-sm font-bold text-gray-700">Ganti Oli (Jasa Free)</span>
+                            <span class="text-sm font-black text-hondaRed">Cek Stok Oli</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/6281234567890?text=Halo%20AHASS%20Roda%20Mas,%20saya%20mau%20booking%20servis" class="block text-center w-full bg-hondaRed text-white py-3 rounded-lg font-black mt-6 shadow hover:bg-hondaDark transition text-sm uppercase">Booking Via WA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION EDUKASI: TIPS RM -->
+    <section id="edukasi" class="max-w-7xl mx-auto py-16 px-4">
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-10 text-center sm:text-left">
+            <div>
+                <h2 class="text-2xl font-black text-gray-900 uppercase">Tips & Edukasi RM</h2>
+                <div class="h-1 w-12 bg-hondaRed mt-2 mx-auto sm:mx-0"></div>
+            </div>
+            <a href="#" class="mt-4 sm:mt-0 text-hondaRed font-bold text-xs uppercase">Lihat Selengkapnya →</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-hondaRed transition cursor-pointer">
+                <div class="w-20 h-20 bg-gray-200 rounded-lg flex-shrink-0 flex items-center justify-center">
+                    <i class="fas fa-oil-can text-hondaRed text-2xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-1 leading-tight">Mitos atau Fakta: Ganti Oli Harus Tiap 1000KM?</h4>
+                    <p class="text-[11px] text-gray-500">Pahami durasi penggantian oli mesin yang tepat agar performa tetap maksimal...</p>
+                </div>
+            </div>
+            <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-hondaRed transition cursor-pointer">
+                <div class="w-20 h-20 bg-gray-200 rounded-lg flex-shrink-0 flex items-center justify-center">
+                    <i class="fas fa-file-invoice-dollar text-hondaRed text-2xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm mb-1 leading-tight">Tips Agar Berkas Kredit Motor Cepat ACC</h4>
+                    <p class="text-[11px] text-gray-500">Siapkan dokumen ini agar pengajuan kredit motor Honda Anda langsung disetujui...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (MOBILE FRIENDLY) -->
+    <footer class="bg-gray-900 text-white py-12 px-4 border-t-8 border-hondaRed">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div>
+                <h3 class="font-black text-xl mb-4 tracking-tighter uppercase">Roda Mas Motor</h3>
+                <p class="text-gray-400 text-xs leading-relaxed mb-6">Dealer Resmi Honda & Bengkel AHASS. Melayani warga Situbondo dan sekitarnya dengan pelayanan prima dan transparansi harga.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-hondaRed transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-hondaRed transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-hondaRed transition"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-hondaRed text-sm uppercase">Info Lokasi</h4>
+                <p class="text-xs text-gray-400 mb-2 font-bold">Showroom & AHASS Roda Mas</p>
+                <p class="text-xs text-gray-400 mb-4 italic">Alamat: Jl. Raya Situbondo (Pusat Kota), Jawa Timur.</p>
+                <p class="text-xs text-gray-400 font-bold mb-1">Jam Operasional:</p>
+                <p class="text-xs text-gray-400 italic">Senin - Sabtu: 08.00 - 16.30 WIB</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-hondaRed text-sm uppercase">Kontak Langsung</h4>
+                <div class="space-y-3 text-xs">
+                    <p class="flex items-center"><i class="fas fa-phone text-hondaRed mr-3"></i>(0338) 123-456</p>
+                    <p class="flex items-center"><i class="fab fa-whatsapp text-hondaRed mr-3"></i>0812-3456-7890 (Admin Sales)</p>
+                    <div class="pt-6">
+                        <p class="text-[10px] text-gray-600 uppercase tracking-widest font-bold">STRATEGIST: AHMAD ROSIDI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-gray-800 text-[10px] text-gray-500 uppercase font-bold tracking-widest">
+            &copy; 2026 Roda Mas Motor. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- SCRIPT CALCULATOR -->
+    <script>
+        function calculateCredit() {
+            const price = parseFloat(document.getElementById('price').value);
+            const dp = parseFloat(document.getElementById('dp').value);
+            const tenor = parseInt(document.getElementById('tenor').value);
+            
+            if (isNaN(price) || isNaN(dp) || dp >= price) {
+                alert("Input harga atau DP tidak valid.");
+                return;
+            }
+
+            const principal = price - dp;
+            // Asumsi Bunga Flat 1.8% per bulan (Bunga motor standar)
+            const monthlyInterestRate = 0.018;
+            
+            const totalInterest = principal * monthlyInterestRate * tenor;
+            const totalPayable = principal + totalInterest;
+            const installment = totalPayable / tenor;
+
+            // Format Currency IDR
+            const formatter = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            });
+
+            document.getElementById('monthly-installment').innerText = formatter.format(installment);
+        }
+
+        // Run once on load
+        window.onload = function() {
+            calculateCredit();
+        };
+    </script>
+</body>
+</html>
