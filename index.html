@@ -30,7 +30,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
 
-    <!-- NAVIGATION -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -39,134 +38,86 @@
                 </div>
                 <span class="font-black text-xl tracking-tighter text-gray-900">RODA MAS MOTOR</span>
             </div>
-            <!-- Mobile Menu Toggle (Simplified for HTML example) -->
+            
             <div class="hidden md:flex space-x-6 font-bold text-xs text-gray-600 uppercase">
                 <a href="#home" class="hover:text-hondaRed transition">Home</a>
-                <a href="#katalog" class="hover:text-hondaRed transition">Katalog (H1)</a>
-                <a href="#kalkulator" class="hover:text-hondaRed transition">Kalkulator</a>
+                <a href="#katalog-otr" class="hover:text-hondaRed transition">Daftar OTR Situbondo</a>
                 <a href="#servis" class="hover:text-hondaRed transition">Servis (H2)</a>
                 <a href="#edukasi" class="hover:text-hondaRed transition">Tips RM</a>
             </div>
-            <a href="https://wa.me/6281234567890" class="bg-hondaRed text-white px-4 py-2 rounded-full font-bold text-xs shadow hover:bg-hondaDark transition">
+            <a href="https://wa.me/6283832791540" target="_blank" class="bg-hondaRed text-white px-4 py-2 rounded-full font-bold text-xs shadow hover:bg-hondaDark transition">
                 WA ADMIN
             </a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero-bg min-h-[70vh] flex items-center justify-center text-center text-white px-4">
+    <section id="home" class="hero-bg min-h-[60vh] flex items-center justify-center text-center text-white px-4">
         <div class="max-w-3xl">
             <h1 class="text-3xl md:text-6xl font-black mb-4 uppercase italic">Partner Berkendara Honda Anda</h1>
             <p class="text-base md:text-xl text-red-100 mb-8">Dealer Resmi Honda & AHASS Terpercaya. Miliki motor impian dengan proses tercepat dan servis tanpa antre.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#katalog" class="bg-white text-hondaRed px-8 py-3 rounded-lg font-black shadow-xl hover:bg-gray-100 transition">Cek Katalog H1</a>
+                <a href="#katalog-otr" class="bg-white text-hondaRed px-8 py-3 rounded-lg font-black shadow-xl hover:bg-gray-100 transition">Cek OTR Situbondo</a>
                 <a href="#servis" class="bg-hondaRed border border-white text-white px-8 py-3 rounded-lg font-black shadow-xl hover:bg-hondaDark transition">Booking AHASS H2</a>
             </div>
         </div>
     </section>
 
-    <!-- SECTION H1: KATALOG MOTOR (MOBILE FRIENDLY GRID) -->
-    <section id="katalog" class="max-w-7xl mx-auto py-16 px-4">
+    <section id="katalog-otr" class="max-w-7xl mx-auto py-16 px-4">
         <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-2 uppercase">Katalog Motor Terpopuler</h2>
+            <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-2 uppercase">Daftar Harga OTR Situbondo</h2>
             <div class="h-1 w-16 bg-hondaRed mx-auto"></div>
-            <p class="mt-4 text-sm text-gray-500">Daftar harga dan pilihan motor Honda terbaru di Roda Mas Motor.</p>
+            <p class="mt-4 text-sm text-gray-500">Gunakan filter atau pencarian untuk memeriksa harga unit motor Honda resmi.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Motor Item 1 -->
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden group border border-transparent hover:border-hondaRed transition-all">
-                <div class="aspect-video bg-gray-200 relative overflow-hidden">
-                    <img src="https://via.placeholder.com/600x400/CC0000/FFFFFF?text=Honda+Vario+160" alt="Vario 160" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 bg-hondaRed text-white text-[10px] font-black px-2 py-1 rounded">HOT PROMO</span>
-                </div>
-                <div class="p-5">
-                    <h3 class="font-black text-lg mb-1">Honda Vario 160</h3>
-                    <p class="text-hondaRed font-bold text-base mb-4">Cicilan Mulai Rp 35rb/Hari</p>
-                    <ul class="space-y-1 text-xs text-gray-500 mb-6">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Smart Key System</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Full Digital Panel</li>
-                    </ul>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Roda%20Mas,%20saya%20tertarik%20dengan%20Vario%20160" class="block text-center w-full py-2.5 bg-hondaRed text-white font-bold rounded-lg hover:bg-hondaDark transition uppercase text-xs">Konsultasi Kredit</a>
-                </div>
+        <div class="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+                <button onclick="filterCategory('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-hondaRed text-white shadow-sm transition-all">
+                    <i class="fas fa-th-large mr-1.5"></i>Semua Tipe
+                </button>
+                <button onclick="filterCategory('matic')" id="btn-matic" class="filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all">
+                    <i class="fas fa-bolt mr-1.5"></i>Matic
+                </button>
+                <button onclick="filterCategory('sport')" id="btn-sport" class="filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all">
+                    <i class="fas fa-tachometer-alt mr-1.5"></i>Sport
+                </button>
+                <button onclick="filterCategory('cup')" id="btn-cup" class="filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all">
+                    <i class="fas fa-motorcycle mr-1.5"></i>Cup / Bebek
+                </button>
+                <button onclick="filterCategory('ev')" id="btn-ev" class="filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all">
+                    <i class="fas fa-charging-station mr-1.5"></i>EV (Listrik)
+                </button>
             </div>
-            <!-- Motor Item 2 -->
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden group border border-transparent hover:border-hondaRed transition-all">
-                <div class="aspect-video bg-gray-200 relative overflow-hidden">
-                    <img src="https://via.placeholder.com/600x400/CC0000/FFFFFF?text=Honda+Scoopy" alt="Scoopy" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5">
-                    <h3 class="font-black text-lg mb-1">Honda Scoopy</h3>
-                    <p class="text-hondaRed font-bold text-base mb-4">Cicilan Mulai Rp 28rb/Hari</p>
-                    <ul class="space-y-1 text-xs text-gray-500 mb-6">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Iconic Design</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>USB Charger</li>
-                    </ul>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Roda%20Mas,%20saya%20tertarik%20dengan%20Scoopy" class="block text-center w-full py-2.5 bg-hondaRed text-white font-bold rounded-lg hover:bg-hondaDark transition uppercase text-xs">Konsultasi Kredit</a>
-                </div>
+
+            <div class="relative w-full md:w-80">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                    <i class="fas fa-search text-sm"></i>
+                </span>
+                <input type="text" id="searchInput" onkeyup="searchMotor()" placeholder="Cari tipe motor..." class="w-full pl-9 pr-4 py-2 border border-gray-200 rounded-xl text-sm bg-gray-50 focus:ring-2 focus:ring-hondaRed outline-none transition-all">
             </div>
-            <!-- Motor Item 3 -->
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden group border border-transparent hover:border-hondaRed transition-all">
-                <div class="aspect-video bg-gray-200 relative overflow-hidden">
-                    <img src="https://via.placeholder.com/600x400/CC0000/FFFFFF?text=Honda+Beat" alt="Beat" class="w-full h-full object-cover">
-                    <span class="absolute top-3 left-3 bg-gray-900 text-white text-[10px] font-black px-2 py-1 rounded">TERIRIT</span>
-                </div>
-                <div class="p-5">
-                    <h3 class="font-black text-lg mb-1">Honda Beat</h3>
-                    <p class="text-hondaRed font-bold text-base mb-4">Cicilan Mulai Rp 22rb/Hari</p>
-                    <ul class="space-y-1 text-xs text-gray-500 mb-6">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Mesin eSP Irit</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Power Charger</li>
-                    </ul>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Roda%20Mas,%20saya%20tertarik%20dengan%20Beat" class="block text-center w-full py-2.5 bg-hondaRed text-white font-bold rounded-lg hover:bg-hondaDark transition uppercase text-xs">Konsultasi Kredit</a>
-                </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-200 text-gray-500 text-xs uppercase font-bold tracking-wider">
+                            <th class="px-6 py-4">Kategori</th>
+                            <th class="px-6 py-4">Nama & Varian Unit Motor</th>
+                            <th class="px-6 py-4">Harga OTR Situbondo</th>
+                            <th class="px-6 py-4 text-center">Aksi / Penjualan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="motorTableBody" class="divide-y divide-gray-100 text-sm text-gray-700">
+                        </tbody>
+                </table>
+            </div>
+            <div id="noDataRow" class="hidden text-center py-12 bg-white text-gray-400">
+                <i class="fas fa-motorcycle-slash text-4xl mb-2 block"></i>
+                Tipe motor atau varian tidak ditemukan dalam katalog ini.
             </div>
         </div>
     </section>
 
-    <!-- SECTION: KALKULATOR KREDIT (MOBILE FRIENDLY FORM) -->
-    <section id="kalkulator" class="bg-gray-100 py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-                <!-- Left: Form -->
-                <div class="p-8 md:w-1/2">
-                    <h3 class="text-2xl font-black text-gray-800 mb-2 uppercase">Kalkulator Kredit</h3>
-                    <p class="text-sm text-gray-500 mb-6">Hitung simulasi cicilan motor Honda impianmu secara instan.</p>
-                    
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 mb-1">Harga Motor (Rp)</label>
-                            <input type="number" id="price" value="25000000" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:border-hondaRed" placeholder="25.000.000">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 mb-1">Uang Muka / DP (Rp)</label>
-                            <input type="number" id="dp" value="3000000" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:border-hondaRed" placeholder="3.000.000">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 mb-1">Tenor (Bulan)</label>
-                            <select id="tenor" class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:border-hondaRed bg-white">
-                                <option value="11">11 Bulan</option>
-                                <option value="23">23 Bulan</option>
-                                <option value="35" selected>35 Bulan</option>
-                            </select>
-                        </div>
-                        <button onclick="calculateCredit()" class="w-full bg-hondaRed text-white py-3 rounded-lg font-black shadow hover:bg-hondaDark transition uppercase text-sm mt-4">
-                            Hitung Simulasi
-                        </button>
-                    </div>
-                </div>
-                <!-- Right: Result -->
-                <div class="bg-hondaRed p-8 md:w-1/2 text-white flex flex-col justify-center items-center text-center">
-                    <p class="text-sm font-bold uppercase opacity-80 mb-2">Estimasi Cicilan Anda</p>
-                    <h4 class="text-4xl md:text-5xl font-black mb-4" id="monthly-installment">Rp 0</h4>
-                    <p class="text-xs opacity-80 mb-6 italic">*Simulasi bersifat perkiraan. Hubungi admin untuk promo bunga spesial Roda Mas Motor.</p>
-                    <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20sudah%20hitung%20simulasi%20kredit" class="bg-white text-hondaRed px-6 py-2 rounded-full font-bold text-xs uppercase shadow-lg">Tanya Promo ACC</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION H2: SERVIS AHASS (MOBILE FRIENDLY) -->
     <section id="servis" class="bg-white py-16 px-4 border-t">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
             <div class="lg:w-1/2">
@@ -209,13 +160,12 @@
                             <span class="text-sm font-black text-hondaRed">Cek Stok Oli</span>
                         </div>
                     </div>
-                    <a href="https://wa.me/6281234567890?text=Halo%20AHASS%20Roda%20Mas,%20saya%20mau%20booking%20servis" class="block text-center w-full bg-hondaRed text-white py-3 rounded-lg font-black mt-6 shadow hover:bg-hondaDark transition text-sm uppercase">Booking Via WA</a>
+                    <a href="https://wa.me/6283832791540?text=Halo%20AHASS%20Roda%20Mas,%20saya%20mau%20booking%20servis" target="_blank" class="block text-center w-full bg-hondaRed text-white py-3 rounded-lg font-black mt-6 shadow hover:bg-hondaDark transition text-sm uppercase">Booking Via WA</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION EDUKASI: TIPS RM -->
     <section id="edukasi" class="max-w-7xl mx-auto py-16 px-4">
         <div class="flex flex-col sm:flex-row justify-between items-center mb-10 text-center sm:text-left">
             <div>
@@ -247,7 +197,6 @@
         </div>
     </section>
 
-    <!-- FOOTER (MOBILE FRIENDLY) -->
     <footer class="bg-gray-900 text-white py-12 px-4 border-t-8 border-hondaRed">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
             <div>
@@ -270,7 +219,7 @@
                 <h4 class="font-bold mb-4 text-hondaRed text-sm uppercase">Kontak Langsung</h4>
                 <div class="space-y-3 text-xs">
                     <p class="flex items-center"><i class="fas fa-phone text-hondaRed mr-3"></i>(0338) 123-456</p>
-                    <p class="flex items-center"><i class="fab fa-whatsapp text-hondaRed mr-3"></i>0812-3456-7890 (Admin Sales)</p>
+                    <p class="flex items-center"><i class="fab fa-whatsapp text-hondaRed mr-3"></i>0838-3279-1540 (Admin Sales)</p>
                     <div class="pt-6">
                         <p class="text-[10px] text-gray-600 uppercase tracking-widest font-bold">STRATEGIST: AHMAD ROSIDI</p>
                     </div>
@@ -282,40 +231,227 @@
         </div>
     </footer>
 
-    <!-- SCRIPT CALCULATOR -->
     <script>
-        function calculateCredit() {
-            const price = parseFloat(document.getElementById('price').value);
-            const dp = parseFloat(document.getElementById('dp').value);
-            const tenor = parseInt(document.getElementById('tenor').value);
+        const motorDatabase = [
+            // MATIC
+            { cat: 'matic', nama: 'BeAT CBS - ISS Deluxe Silver', harga: 'Rp. 21,650,000' },
+            { cat: 'matic', nama: 'BeAT CBS - ISS Deluxe Blue', harga: 'Rp. 22,200,000' },
+            { cat: 'matic', nama: 'BeAT CBS - ISS Deluxe Brown', harga: 'Rp. 22,200,000' },
+            { cat: 'matic', nama: 'BeAT CBS - ISS Deluxe Black', harga: 'Rp. 22,200,000' },
+            { cat: 'matic', nama: 'BeAT CBS Funk Red Black', harga: 'Rp. 20,750,000' },
+            { cat: 'matic', nama: 'BeAT CBS Techno Blue Black', harga: 'Rp. 21,650,000' },
+            { cat: 'matic', nama: 'BeAT CBS Hard Rock Black', harga: 'Rp. 20,750,000' },
+            { cat: 'matic', nama: 'BeAT CBS Jazz Silver Black', harga: 'Rp. 20,750,000' },
+            { cat: 'matic', nama: 'Genio CBS - ISS Fabulous Matte Blue', harga: 'Rp. 22,250,000' },
+            { cat: 'matic', nama: 'Genio CBS - ISS Fabulous Matte Black', harga: 'Rp. 22,250,000' },
+            { cat: 'matic', nama: 'Genio CBS - ISS Fabulous Matte Brown', harga: 'Rp. 22,250,000' },
+            { cat: 'matic', nama: 'Genio CBS Radiant Red Black', harga: 'Rp. 21,700,000' },
+            { cat: 'matic', nama: 'Genio CBS Radiant Black', harga: 'Rp. 21,700,000' },
+            { cat: 'matic', nama: 'Genio CBS Radiant Brown Black', harga: 'Rp. 21,700,000' },
+            { cat: 'matic', nama: 'BeAT Street CBS Street Black', harga: 'Rp. 21,650,000' },
+            { cat: 'matic', nama: 'BeAT Street CBS Street Silver', harga: 'Rp. 21,650,000' },
+            { cat: 'matic', nama: 'Vario 160 ABS Grande Matte White', harga: 'Rp. 32,000,000' },
+            { cat: 'matic', nama: 'Vario 160 ABS Grande Matte Black (ABS)', harga: 'Rp. 32,000,000' },
+            { cat: 'matic', nama: 'Vario 160 ABS Active Black', harga: 'Rp. 32,000,000' },
+            { cat: 'matic', nama: 'Vario 160 CBS Grande Matte Red', harga: 'Rp. 29,000,000' },
+            { cat: 'matic', nama: 'Vario 160 CBS Grande Matte Black (CBS)', harga: 'Rp. 29,250,000' },
+            { cat: 'matic', nama: 'Vario 160 CBS Active Black', harga: 'Rp. 29,000,000' },
+            { cat: 'matic', nama: 'Vario 160 CBS Active Matte Blue', harga: 'Rp. 29,000,000' },
+            { cat: 'matic', nama: 'Vario 160 CBS Grande Matte White', harga: 'Rp. 29,250,000' },
+            { cat: 'matic', nama: 'Scoopy Prestige Prestige White', harga: 'Rp. 25,200,000' },
+            { cat: 'matic', nama: 'Scoopy Stylish Stylish Green', harga: 'Rp. 25,200,000' },
+            { cat: 'matic', nama: 'Scoopy Stylish Stylish Red', harga: 'Rp. 25,200,000' },
+            { cat: 'matic', nama: 'Scoopy CBS Sporty Red', harga: 'Rp. 23,757,000' },
+            { cat: 'matic', nama: 'Scoopy Fashion Fashion Blue', harga: 'Rp. 24,300,000' },
+            { cat: 'matic', nama: 'Scoopy Prestige Prestige Black', harga: 'Rp. 25,200,000' },
+            { cat: 'matic', nama: 'Scoopy Energetic Energetic Red', harga: 'Rp. 24,300,000' },
+            { cat: 'matic', nama: 'Scoopy Fashion Fashion Brown', harga: 'Rp. 24,300,000' },
+            { cat: 'matic', nama: 'Scoopy Energetic Energetic Silver', harga: 'Rp. 24,300,000' },
+            { cat: 'matic', nama: 'Vario 125 CBS Sporty Red', harga: 'Rp. 25,600,000' },
+            { cat: 'matic', nama: 'Vario 125 CBS Sporty Black', harga: 'Rp. 25,600,000' },
+            { cat: 'matic', nama: 'Vario 125 CBS - ISS Advance Matte Blue', harga: 'Rp. 28,000,000' },
+            { cat: 'matic', nama: 'Vario 125 CBS - ISS Advance Matte Black', harga: 'Rp. 28,000,000' },
+            { cat: 'matic', nama: 'Vario 125 CBS - ISS Advance Matte Red', harga: 'Rp. 28,000,000' },
+            { cat: 'matic', nama: 'Vario 125 CBS - ISS Advance Blue', harga: 'Rp. 27,550,000' },
+            { cat: 'matic', nama: 'PCX 160 ABS Phenomenal White', harga: 'Rp. 39,300,000' },
+            { cat: 'matic', nama: 'PCX 160 ABS Phenomenal Matte Silver', harga: 'Rp. 39,300,000' },
+            { cat: 'matic', nama: 'PCX 160 ABS Phenomenal Matte Red', harga: 'Rp. 39,300,000' },
+            { cat: 'matic', nama: 'PCX 160 ABS Phenomenal Matte Black', harga: 'Rp. 39,300,000' },
+            { cat: 'matic', nama: 'PCX 160 CBS Exceptional White', harga: 'Rp. 35,300,000' },
+            { cat: 'matic', nama: 'PCX 160 CBS Exceptional Red', harga: 'Rp. 35,300,000' },
+            { cat: 'matic', nama: 'PCX 160 CBS Exceptional Matte Silver', harga: 'Rp. 35,300,000' },
+            { cat: 'matic', nama: 'PCX 160 Roadsync Roadsync Matte Black', harga: 'Rp. 42,100,000' },
+            { cat: 'matic', nama: 'PCX 160 Roadsync Roadsync Red', harga: 'Rp. 42,100,000' },
+            { cat: 'matic', nama: 'PCX 160 CBS Exceptional Black', harga: 'Rp. 35,300,000' },
+            { cat: 'matic', nama: 'ADV 160 ABS Tough Matte Red', harga: 'Rp. 41,200,000' },
+            { cat: 'matic', nama: 'ADV 160 ABS Tough Matte Black', harga: 'Rp. 41,200,000' },
+            { cat: 'matic', nama: 'ADV 160 Roadsync SUV Brown', harga: 'Rp. 42,850,000' },
+            { cat: 'matic', nama: 'ADV 160 CBS Dynamic Red', harga: 'Rp. 38,000,000' },
+            { cat: 'matic', nama: 'ADV 160 CBS Dynamic Black', harga: 'Rp. 38,000,000' },
+            { cat: 'matic', nama: 'ADV 160 CBS Dynamic White', harga: 'Rp. 38,000,000' },
+            { cat: 'matic', nama: 'ADV 160 ABS Tough Matte Brown', harga: 'Rp. 41,200,000' },
+            { cat: 'matic', nama: 'ADV 160 CBS Dynamic Gray', harga: 'Rp. 38,000,000' },
+            { cat: 'matic', nama: 'ADV 160 ABS Tough Matte Green', harga: 'Rp. 41,200,000' },
+            { cat: 'matic', nama: 'ADV 160 CBS Solid Black', harga: 'Rp. 38,000,000' },
+            { cat: 'matic', nama: 'ADV 160 CBS Solid Matte Red', harga: 'Rp. 38,000,000' },
+            { cat: 'matic', nama: 'ADV 160 CBS Solid White', harga: 'Rp. 38,000,000' },
+            { cat: 'matic', nama: 'Forza ABS Mat Gunpowder Black Metallic', harga: 'Rp. 93,900,000' },
+            { cat: 'matic', nama: 'Forza ABS Pearl Smoky Grey', harga: 'Rp. 93,900,000' },
+            { cat: 'matic', nama: 'Forza ABS Pearl Horizon White', harga: 'Rp. 93,900,000' },
+            { cat: 'matic', nama: 'Forza ABS Candy Rosy Red', harga: 'Rp. 93,900,000' },
+            { cat: 'matic', nama: 'Stylo 160 ABS Royal Green', harga: 'Rp. 33,700,000' },
+            { cat: 'matic', nama: 'Stylo 160 ABS Royal Matte White', harga: 'Rp. 33,700,000' },
+            { cat: 'matic', nama: 'Stylo 160 ABS Royal Matte Black', harga: 'Rp. 33,700,000' },
+            { cat: 'matic', nama: 'Stylo 160 CBS Glam Red', harga: 'Rp. 30,700,000' },
+            { cat: 'matic', nama: 'Stylo 160 CBS Glam Beige', harga: 'Rp. 30,700,000' },
+            { cat: 'matic', nama: 'Stylo 160 CBS Glam Black', harga: 'Rp. 30,700,000' },
+            { cat: 'matic', nama: 'Stylo 160 ABS Royal Matte Blue', harga: 'Rp. 33,700,000' },
             
-            if (isNaN(price) || isNaN(dp) || dp >= price) {
-                alert("Input harga atau DP tidak valid.");
+            // SPORT
+            { cat: 'sport', nama: 'CB 150 Verza CW Bold Red', harga: 'Rp. 26,350,000' },
+            { cat: 'sport', nama: 'CB 150 Verza CW Macho Matte Black', harga: 'Rp. 26,350,000' },
+            { cat: 'sport', nama: 'CB 150 Verza SW Masculine Black', harga: 'Rp. 25,650,000' },
+            { cat: 'sport', nama: 'Sonic 150R CW New Energetic Red', harga: 'Rp. 28,850,000' },
+            { cat: 'sport', nama: 'Sonic 150R CW New Activo Black', harga: 'Rp. 28,850,000' },
+            { cat: 'sport', nama: 'Sonic 150R CW New Aggresso Matte Black', harga: 'Rp. 29,250,000' },
+            { cat: 'sport', nama: 'Sonic 150R CW Honda Racing Red', harga: 'Rp. 29,250,000' },
+            { cat: 'sport', nama: 'CB150R Streetfire Special Edition Fury Matte Red', harga: 'Rp. 36,300,000' },
+            { cat: 'sport', nama: 'CB150R Streetfire Special Edition Raptor Matte Black', harga: 'Rp. 36,300,000' },
+            { cat: 'sport', nama: 'CB150R Streetfire Special Edition Armored Matte Grey', harga: 'Rp. 36,300,000' },
+            { cat: 'sport', nama: 'CB150R Streetfire CW Stinger Red Black', harga: 'Rp. 35,300,000' },
+            { cat: 'sport', nama: 'CB150R Streetfire CW Macho Black', harga: 'Rp. 35,300,000' },
+            { cat: 'sport', nama: 'CRF150L SW Extreme Red', harga: 'Rp. 38,350,000' },
+            { cat: 'sport', nama: 'CRF150L SW Extreme Black', harga: 'Rp. 38,350,000' },
+            { cat: 'sport', nama: 'CRF150L SW Extreme White', harga: 'Rp. 38,350,000' },
+            { cat: 'sport', nama: 'CRF150L SW Extreme Green', harga: 'Rp. 38,350,000' },
+            { cat: 'sport', nama: 'CBR150R STD-ABS Honda TRICOLOR', harga: 'Rp. 40,650,000' },
+            { cat: 'sport', nama: 'CBR150R STD-ABS Victory Red Black', harga: 'Rp. 39,900,000' },
+            { cat: 'sport', nama: 'CBR150R STD-ABS Dominator Matter Black', harga: 'Rp. 39,900,000' },
+            { cat: 'sport', nama: 'CBR150R STD Honda RACING RED', harga: 'Rp. 44,700,000' },
+            { cat: 'sport', nama: 'CBR250RR SP - QS Honda Tricolor', harga: 'Rp. 84,600,000' },
+            { cat: 'sport', nama: 'CBR250RR SP - QS Honda Racing Red', harga: 'Rp. 84,600,000' },
+            { cat: 'sport', nama: 'CBR250RR SP - QS Bravery Red Black', harga: 'Rp. 84,000,000' },
+            { cat: 'sport', nama: 'CBR250RR STD Mat Gundpowder Black Metallic', harga: 'Rp. 71,850,000' },
+            { cat: 'sport', nama: 'CBR250RR STD Black Freedom', harga: 'Rp. 67,000,000' },
+            { cat: 'sport', nama: 'CBR250RR SP Mystique Blue', harga: 'Rp. 80,100,000' },
+            { cat: 'sport', nama: 'Monkey CW Pearl Nebula Red', harga: 'Rp. 87,200,000' },
+            { cat: 'sport', nama: 'Monkey CW Banana Yellow', harga: 'Rp. 87,200,000' },
+            { cat: 'sport', nama: 'Monkey CW Pearl Shining Black', harga: 'Rp. 87,200,000' },
+            { cat: 'sport', nama: 'CRF250 RALLY SW Extreme Red', harga: 'Rp. 95,700,000' },
+            { cat: 'sport', nama: 'CRF250L DOHC Extreme Red', harga: 'Rp. 86,050,000' },
+            { cat: 'sport', nama: 'ST125 Dax CW Pearl Nebula Red', harga: 'Rp. 82,750,000' },
+            { cat: 'sport', nama: 'ST125 Dax CW Pearl Cadet Gray', harga: 'Rp. 82,750,000' },
+
+            // CUP / BEBEK
+            { cat: 'cup', nama: 'CT125 SW Glowing Red', harga: 'Rp. 82,250,000' },
+            { cat: 'cup', nama: 'Revo FIT Galaxy Blue', harga: 'Rp. 19,100,000' },
+            { cat: 'cup', nama: 'Revo FIT Raving Red', harga: 'Rp. 19,100,000' },
+            { cat: 'cup', nama: 'Revo X Attractive Red', harga: 'Rp. 20,800,000' },
+            { cat: 'cup', nama: 'Revo X Quantum Black', harga: 'Rp. 20,800,000' },
+            { cat: 'cup', nama: 'Supra X 125 FI CW Golden Matte Black', harga: 'Rp. 23,400,000' },
+            { cat: 'cup', nama: 'Supra X 125 FI CW Energetic Red', harga: 'Rp. 23,400,000' },
+            { cat: 'cup', nama: 'Supra X 125 FI SW Quantum Matte Black', harga: 'Rp. 22,350,000' },
+            { cat: 'cup', nama: 'Super Cub C125 Matte Axis Gray Metallic', harga: 'Rp. 79,350,000' },
+            { cat: 'cup', nama: 'Super Cub C125 Pearl Nebula Red', harga: 'Rp. 79,350,000' },
+            { cat: 'cup', nama: 'Super Cub C125 Pearl Niltava Blue', harga: 'Rp. 79,350,000' },
+            { cat: 'cup', nama: 'GTR 150 GTR-150 Sporty Spartan Red', harga: 'Rp. 27,850,000' },
+            { cat: 'cup', nama: 'Supra GTR-150 Sporty Gun Black', harga: 'Rp. 27,850,000' },
+            { cat: 'cup', nama: 'Supra GTR-150 Exclusive Matte Red', harga: 'Rp. 28,100,000' },
+            { cat: 'cup', nama: 'Supra GTR-150 Exclusive Matte Silver', harga: 'Rp. 28,100,000' },
+
+            // EV
+            { cat: 'ev', nama: 'EM1 e: EV Innovative White', harga: 'Rp. 46,450,000' },
+            { cat: 'ev', nama: 'EM1 e: EV Smart Red', harga: 'Rp. 46,450,000' },
+            { cat: 'ev', nama: 'EM1 e: EV Intelligent Matte Black', harga: 'Rp. 46,450,000' },
+            { cat: 'ev', nama: 'EM1 e: Plus EV Excellent Matte Silver', harga: 'Rp. 46,950,000' },
+            { cat: 'ev', nama: 'ICON e: ICON e: Iconic Red', font: 'Rp. 28,450,000', harga: 'Rp. 28,450,000' },
+            { cat: 'ev', nama: 'ICON e: ICON e: Iconic White', harga: 'Rp. 28,450,000' },
+            { cat: 'ev', nama: 'ICON e: ICON e: Orange', harga: 'Rp. 28,450,000' },
+            { cat: 'ev', nama: 'ICON e: ICON e: Black Matte', harga: 'Rp. 28,450,000' },
+            { cat: 'ev', nama: 'ICON e: ICON e: Mint', harga: 'Rp. 28,450,000' },
+            { cat: 'ev', nama: 'CUV e: CUV e: RoadSync Duo Quantum Matte White', harga: 'Rp. 66,300,000' },
+            { cat: 'ev', nama: 'CUV e: CUV e: RoadSync Duo Quantum Matte Silver', harga: 'Rp. 66,300,000' },
+            { cat: 'ev', nama: 'CUV e: CUV e: RoadSync Duo Quantum Matte Black', harga: 'Rp. 66,300,000' },
+            { cat: 'ev', nama: 'CUV e: CUV e: Stellar Matte White', harga: 'Rp. 61,100,000' },
+            { cat: 'ev', nama: 'CUV e: CUV e: Stellar Matte Silver', harga: 'Rp. 61,100,000' },
+            { cat: 'ev', nama: 'CUV e: CUV e: Stellar Matte Black', harga: 'Rp. 61,100,000' }
+        ];
+
+        let currentActiveCategory = 'all';
+
+        function renderCatalog(filterData) {
+            const tbody = document.getElementById('motorTableBody');
+            const noData = document.getElementById('noDataRow');
+            tbody.innerHTML = '';
+
+            if (filterData.length === 0) {
+                noData.classList.remove('hidden');
                 return;
             }
+            noData.classList.add('hidden');
 
-            const principal = price - dp;
-            // Asumsi Bunga Flat 1.8% per bulan (Bunga motor standar)
-            const monthlyInterestRate = 0.018;
-            
-            const totalInterest = principal * monthlyInterestRate * tenor;
-            const totalPayable = principal + totalInterest;
-            const installment = totalPayable / tenor;
+            filterData.forEach(item => {
+                let badgeColor = '';
+                let catText = '';
+                
+                if (item.cat === 'matic') { badgeColor = 'bg-orange-100 text-orange-700'; catText = 'Matic'; }
+                else if (item.cat === 'sport') { badgeColor = 'bg-red-100 text-red-700'; catText = 'Sport'; }
+                else if (item.cat === 'cup') { badgeColor = 'bg-blue-100 text-blue-700'; catText = 'Cup / Bebek'; }
+                else { badgeColor = 'bg-emerald-100 text-emerald-700'; catText = 'EV (Listrik)'; }
 
-            // Format Currency IDR
-            const formatter = new Intl.NumberFormat('id-ID', {
-                style: 'currency',
-                currency: 'IDR',
-                minimumFractionDigits: 0
+                const waMessage = encodeURIComponent(`Halo Roda Mas Motor, saya ingin bertanya dan info cicilan untuk unit: Honda ${item.nama} (${item.harga}). Mohon di-follow up.`);
+                const waLink = `https://wa.me/6283832791540?text=${waMessage}`;
+
+                const row = `
+                    <tr class="hover:bg-gray-50 transition-colors duration-150 card-row" data-name="${item.nama.toLowerCase()}" data-cat="${item.cat}">
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-bold ${badgeColor}">${catText}</span>
+                        </td>
+                        <td class="px-6 py-4 font-semibold text-gray-800">${item.nama}</td>
+                        <td class="px-6 py-4 font-mono font-bold text-hondaRed">${item.harga}</td>
+                        <td class="px-6 py-4 text-center flex justify-center items-center gap-2">
+                            <a href="https://www.astra-honda.com/product" target="_blank" class="inline-flex items-center justify-center bg-gray-700 hover:bg-gray-800 text-white text-xs font-bold py-2 px-3 rounded-xl shadow-sm transition-all gap-1">
+                                <i class="fas fa-info-circle"></i> Spesifikasi
+                            </a>
+                            <a href="${waLink}" target="_blank" class="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white text-xs font-bold py-2 px-3 rounded-xl shadow-sm transition-all gap-1">
+                                <i class="fab fa-whatsapp"></i> Hubungi WA
+                            </a>
+                        </td>
+                    </tr>`;
+                tbody.innerHTML += row;
             });
-
-            document.getElementById('monthly-installment').innerText = formatter.format(installment);
         }
 
-        // Run once on load
-        window.onload = function() {
-            calculateCredit();
-        };
+        renderCatalog(motorDatabase);
+
+        // Filter Kategori
+        function filterCategory(category) {
+            currentActiveCategory = category;
+            
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.className = "filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all";
+            });
+            document.getElementById(`btn-${category}`).className = "filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-hondaRed text-white shadow-sm transition-all";
+
+            executeCombinedFilter();
+        }
+
+        function searchMotor() {
+            executeCombinedFilter();
+        }
+
+        function executeCombinedFilter() {
+            const keyword = document.getElementById('searchInput').value.toLowerCase();
+            
+            const filteredData = motorDatabase.filter(item => {
+                const matchCategory = (currentActiveCategory === 'all' || item.cat === currentActiveCategory);
+                const matchKeyword = item.nama.toLowerCase().includes(keyword);
+                return matchCategory && matchKeyword;
+            });
+
+            renderCatalog(filteredData);
+        }
     </script>
 </body>
 </html>
